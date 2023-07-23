@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONSULTORIO MEDICO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="card text-center">
+    <%- include('../../partials/header.ejs') %>
+      <div class="card-body">
+        <h5 class="card-title">Adicionar Paciente</h5>
+        <p class="card-text">
+
+        <form action="/pacientes/salvar" method="POST">
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="nombre" class="col-form-label">Nombre</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre"
+                required>
+            </div>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="apellido" class="col-form-label">Apellido</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingrese su apellido"
+                required>
+            </div>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="cedula" class="col-form-label">Cédula</label>
+            </div>
+            <div class="col-auto">
+              <input type="number" id="cedula" name="cedula" min="100000" max="99999999" class="form-control"
+                placeholder="Su cédula" required>
+            </div>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="edad" class="col-form-label">Edad</label>
+            </div>
+            <div class="col-auto">
+              <input type="number" id="edad" name="edad" min="1" max="130" class="form-control" placeholder="Su edad"
+                required>
+            </div>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="telefono" class="col-form-label">Teléfono</label>
+            </div>
+            <div class="col-auto">
+              <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Su teléfono" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a href="/pacientes" class="btn btn-secondary">Cancelar</a>
+        </form>
+
+        </p>
+
+      </div>
+      <div class="card-footer text-body-secondary">
+        ©Copyright 2023 - Todos los derechos reservados Giovanna Rueda
+      </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</html>
